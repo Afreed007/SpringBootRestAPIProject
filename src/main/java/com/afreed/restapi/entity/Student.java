@@ -1,6 +1,5 @@
 package com.afreed.restapi.entity;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,21 +8,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "student")
+@Table(name = "Student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rollNo;
     @Column(name = "Student_name")
     private String name;    
-    @Column
+    @Column(name= "Student_percentage")
     private float percentage;
     @Column(name = "Student_branch")
     private String branch;
 
-    public Student(){
-        // TODO Auto-generated constructor stub
-    }
+
     
 
     public Student(String name, float percentage, String branch) {
